@@ -1,0 +1,41 @@
+{
+  "name": "backend-with-devops",
+  "version": "1.0.0",
+  "description": "Express.js backend with TypeScript support",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "postbuild": "cp -r src/public dist/ 2>/dev/null || true",
+    "test": "echo \"No tests specified yet\" && exit 0"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "nodejs",
+    "backend",
+    "devops"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
